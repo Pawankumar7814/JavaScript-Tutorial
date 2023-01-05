@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">Say Hello</button>
+    <!-- We only add one listener but if use addEventListener we can add one or more function -->
+    <button id="btn2" onclick="hello()">Say Hello</button>
+</body>
+<script>
+    var helloButton = document.getElementById('btn1');
+    //helloButton.addEventListener('click', function() {
+    //    alert("Hello!!!");
+    //});
+    function hello() {
+        alert("hello!!");
+    };
+
+    function sayBye() {
+        alert("Bye");
+    };
+    helloButton.addEventListener('click', hello);
+    helloButton.addEventListener('click', sayBye);
+</script>
+
+</html>

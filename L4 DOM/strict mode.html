@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            background-color: red;
+            cursor: pointer;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <h1>Box clicked <span id="counter"> 0 </span>times</h1>
+</body>
+<script>
+    "use strict";
+    var box = document.getElementById('box');
+    var countClick = document.getElementById('counter');
+    var count = 0;
+    //c = 0; // Comment on line 36
+    box.addEventListener('click', function() {
+        count++;
+        //c1 = 100; // This variable will be global if we use strict mode than this will be error
+        console.log(count);
+        countClick.innerText = count + " ";
+    });
+</script>
+
+</html>
+
+<!-- 
+    To use strict mode then we have to write "use strict" at the top of the page of JavaScript file and it will 
+    consider error or mistakes which is ignored by the javascript.
+
+    Strict mode is supported by every browser
+
+    We can also apply this to a particular function
+
+    
+-->

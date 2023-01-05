@@ -1,0 +1,44 @@
+=> Objects in JavaScript is different as compare to Objects of Java or C++.
+
+Note: Key value pairs are called as properties of object.
+
+In order to create an object in JavaScript:
+    var student = {}; // This will create an empty object.
+
+    var student = {
+        "Name" : "Pawan",
+        "Roll No" : 135,
+        "Marks" : 90
+    };              // This will create an object which contains key and value pairs. Key 's value Strings only and double quotes are optional.
+    
+    console.log(student.Marks); // To access the Marks's value with dot notation.
+    student.sem = 4;  // This will add key "sem" and its value "4" in object 'student".
+
+=> In this we don't have any access modifiers or public or private.
+=> JavaScript object is collection of properties.
+=> JavaScript objects are mutable.
+=> JavaScript objects are created with curly brackets i.e. {}.
+=> JavaScript objects are the values are same of data type.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=> Square brackets notation to access the key and values of an object.
+
+    console.log(student["Name"]); // To access the value of key "Name" of an object "student".
+
+    function printProperty(obj, prop){
+        console.log(obj[prop]);
+    }
+    var prop = "Marks";
+
+    printProperty(student,prop);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+=> Deleting Properties
+
+    delete student.Marks; // This will delete the property of object "student".
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+

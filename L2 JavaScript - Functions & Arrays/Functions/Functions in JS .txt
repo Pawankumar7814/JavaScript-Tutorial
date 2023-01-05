@@ -1,0 +1,177 @@
+=> How to create a function in JavaScript?
+    Syntax:
+        function function_name(){
+            // Write your code here
+        }
+
+    // To call the function
+    function_name();
+
+    Example 1: 
+        function showAlert(){
+            alert("Hello");
+        }
+
+        showAlert();
+
+    Syntax of parameterize function:
+        function function_name(parameter){
+            // Write your code here
+        }
+
+    Example 2:
+        function printNumberTillN(n){
+            for(var i = 0; i < N;i++){
+                console.log(i);
+            }
+        }
+
+        printNumberTillN(5);
+
+If we want to a function that it should return the output to from where function call.
+
+    Example 3: WAP to print the sum of two numbers
+    Ans:
+        function sumOfTwoNumbers(a, b){
+            return a + b;
+        }
+
+        var ans = sumOfTwoNumbers(2,5); // Calling the function and getting the output
+        console.log(ans);   // Displaying the output we get from the function
+
+---------------------------------------------------------------------------------------------------------------------------
+
+=> Return: stops executing and returns the value is the purpose of return statement in a function
+
+=> "Function keyword, identifier and Parentheses" is the correct way of defining a function in JavaScript.
+
+=>  function test(a,b){
+        console.log(a+b);
+    }
+
+    test(4,5,1);
+
+    Output : 9
+
+    // because extra argument will be ignore by the JavaScript compiler
+
+=>  function test(a,b,c){
+        console.log(a+b*c);
+    }
+
+    test(4,5);
+
+    Output: NaN
+
+    // because we didn't pass the required arguments that's why we get an error as NaN.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+=> Execution context
+    - Environment 
+        - Global Environment:
+            - variable Environment
+            - this
+
+        Outer Environment:
+            - variable
+            - this
+            - Reference to outer Environment. (Outer Environment is global Environment).
+
+        Example: 
+            var name = "global";
+            function scopeDemo(){
+                console.log(name);
+            }
+
+            scopeDemo();
+            console.log(name);
+
+        Example 2:
+            function c(){
+                console.log("inside c");
+            }
+
+            function b(){
+                c();
+                console.log("inside b");
+            }
+
+            function a(){
+                b();
+                console.log("inside a");
+            }
+
+            a();
+
+            console.log("Global context");
+
+---------------------------------------------------------------------------------------------------------------------------
+
+=> Function within Function
+
+    Example 1:
+        function outer(){
+            var outerVar = 1;
+            console.log(outerVar);
+            function inner(){
+                outerVar = 10;
+                console.log(outerVar);
+            }
+        }
+
+        function inner();
+
+        Output: Undefined inner;
+
+    Example 2:
+        function outer(){
+            var outerVar = 1;
+            console.log(outerVar);
+            function inner(){
+                outerVar = 10;
+                console.log(outerVar);
+            }
+        }
+
+        function outer();
+
+        Output: 1 
+
+    Example 3:
+        function outer(){
+            var outerVar = 1;
+            console.log(outerVar);
+            function inner(){
+                outerVar = 10;
+                console.log(outerVar);
+            }
+            inner();
+        }
+
+        function outer();
+
+        Output: 1 10 
+
+---------------------------------------------------------------------------------------------------------------------------
+
+=> Function Declaration
+    Example:
+        function fact(n){
+            for(var i = 1; i <=n; i++){
+                ans = ans * i;
+            }
+        }
+
+        fact(5);
+
+=> Function Expression
+    Example: 
+        var fact = function fact(n){
+            for(var i = 1; i <=n; i++){
+                ans = ans * i;
+            }
+        }
+
+        console.log(fact(5)); // To call the function expression

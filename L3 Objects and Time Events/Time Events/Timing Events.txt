@@ -1,0 +1,31 @@
+=> Timing Events 
+    1) SetTimeout(function_name, Interval after which we want to execute the code for one time):
+        for example:
+            function function_name(){
+                console.log("HEllo");
+            }
+
+            setTimeout(function_name, 1000); // Time will be in mili seconds.
+
+    2) setInterval(function_name, Interval after which we want to execute the code repeatedly) function:
+        for example:
+                function function_name(){
+                    console.log("HEllo");
+                }
+
+                setInterval(function_name, 1000); // Time will be in mili seconds.
+
+    3) clearInterval(): It is used to stop the code execution after implementation of setInterval() or SetTimeout();
+        Syntax: clearInterval(Interval);
+        for example:
+            var sec = 1;
+            function function_name(){
+                console.log("HEllo",sec);
+                sec++;
+                if(sec == 6){
+                    To stop the execution
+                    clearInterval(id);
+                }
+            }
+
+            var id = setInterval(function_name, 1000); // Time will be in mili seconds.

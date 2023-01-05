@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagation Events</title>
+    <style>
+        #outer {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            box-sizing: border-box;
+            margin: 50px;
+            padding: 50px;
+        }
+        
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+</body>
+<script>
+    var innerDiv = document.getElementById('inner');
+    innerDiv.addEventListener('click', function() {
+        console.log("Click inner div");
+    });
+    var outerDiv = document.getElementById('outer');
+    outerDiv.addEventListener('click', function() {
+        console.log("Click outer div");
+    });
+
+    document.addEventListener('click', function() {
+        console.log("Click document");
+    });
+    // Output: Click inner div ; Click outer div ; Click Document
+</script>
+
+</html>
+
+<!--
+    When we click on document It will display only "Click document".
+    When we click on outer div then it will display only "Click outer div" & "Click document".
+    When we click on inner div then it will display only "Click inner div", "Click outer div" & "Click document".
+-->

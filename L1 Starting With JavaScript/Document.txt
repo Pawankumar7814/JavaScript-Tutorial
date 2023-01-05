@@ -1,0 +1,97 @@
+History of JavaScript
+    - Developed by Brandon Eich in 1995.
+    - Add interactivity to Netscape. (Netscape is a web browser of 1990)
+    - First draft was Developed only in  10 days.
+    - Mocha -> LiveScript -> JavaScript (Names).
+    - After JavaScript, Microsoft also came up with JScript.
+    - This caused pain for developers to design pages that work well on IE and Netscape.
+    - Standardized by ECMA International in 1997 and ECMAScript or ES.
+
+ECMAScript Versions
+    - ES1 - 1997
+    - ES2 - 1998
+    - ES3 - 1999
+    - ES5 - 2009
+    - ES6 or ES2015
+    - ES 2016
+    - ES 2017
+    - ES 2018
+
+=> Adding semi-colon(;) is optional. But we must add semi-colon at the end of each line of code.
+
+=> Built in Datatype in JavaScript
+    "var" is a Global Datatype.
+    "let" is local Datatype.
+    "const" is Global Datatype but once it's initialize that we can't overwrite the variable.
+
+=> We have 6 primitives Datatype and 1 object i.e:
+        primitives are : number - 64 bit, String, Boolean, null, undefined, symbol
+        Objects
+
+=> How to create a variable in JavaScript?
+
+    [Datatype] [variable name]
+
+    var a ; 
+
+=> To print the value or display the variable 's value we need to write:
+        console.log();
+
+        example: console.log(a);
+
+=> Declaration : Declaring the variable
+
+=> Defining: Define the variable's value
+
+=> undefined : If user have just declare the variable but not initialize it.
+
+=> Null : null refers to that condition where we don't know the address the value. But the value is set.
+
+=> Infinity : It is an keyword. It appears when a number cross the max value of number (Datatype).
+
+=> NaN : It refers to "Not a Number". 
+        example: If we enter a -ve number and try to find its square root than this will be appear.
+
+=> typeof() : It is an operator to find the type of value.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Operators in JavaScript
+    => Arithmetic Operators     : + - * / %
+    => Logical Operators        : And(&&) OR(||) NOT(!)
+    => Relational Operators     : > < >= <=
+    => Assignment Operators     : = =+ =- =/ =* =%
+    => Increment or Decrement : ++[variable] --[variable]
+    => Comparison              : == >= <= != ===
+
+-----------------------------------------------------------------------------------------------------------------
+
+Type Coercion 
+
+console.log( 1 + "1") Output : 11
+console.log( 1 - "1") Output : 0
+console.log( 1 * "1") Output : 1
+
+-----------------------------------------------------------------------------------------------------------------
+
+=> Conditionals 
+
+    *) if(condition){
+        // Write your code here
+    }
+
+    *) if(condition){
+        // Write your code here
+    }else{
+        // Write your code here
+    }
+
+    *) if(condition){
+        // Write your code here
+    }else if(condition){
+        // Write your code here
+    } else{
+        // Write your code here
+    }
+
+-----------------------------------------------------------------------------------------------------------------

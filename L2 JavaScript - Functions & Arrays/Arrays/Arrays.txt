@@ -1,0 +1,68 @@
+=> How to create an Array in JavaScript?
+    Syntax 1:
+        var arr = [1,2,3,4];
+
+    Syntax 2:
+        var arr = new Array();
+
+    Syntax 3:
+        var arr = new Array(2,3);
+
+    Output: (2) [2,3]
+            (size) (value that contain by array)
+
+--------------------------------------------------------------------------------------
+
+=> Function of array
+    var arr = ["abc",1,true,20];
+    var arr = new Array(1000); // This means the size of array is 1000 
+
+
+    var arr = [1,2,3,4];
+    arr.length();       // To know the size of array
+    arr.push(value);    // To push the value at the end of array
+    arr.pop();          // To remove the value from the end
+    arr.shift(4);       // To shift the array from the array
+    arr.unshift(8);
+
+    splice => This function is used to make changes in an array
+                can be add or removal of two or more elements of arrays
+
+    splice arguments:
+        start index, deletion count, elements to be inserted(Optional)
+    
+    Syntax:
+        arr.splice(1,1)
+
+    Example: 
+        var arr = [2,3,4,5,6];
+        arr.splice(1,1);
+        output: 3
+
+        now the array is [2,4,5,6];
+
+        arr.splice(1);
+        (3) [4,5,6];
+        size values
+
+        // Adding two or more elements
+        var arr =  [1,2,3,4];
+
+        arr.splice(1,0,12,23);
+
+        output: [1,12,23,2,3,4];
+
+------------------------------------------------------------------------------------
+
+=> How to iterate each element of array
+
+Way 1:
+    for(var i = 0; i < arr.length; i++){
+        print(arr[i]);
+    }
+
+Way 2:
+    function print(element){
+        console.log(element);
+    };
+    arr.forEach(print);
