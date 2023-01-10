@@ -1,28 +1,18 @@
-var buttons = document.getElementsByClassName("button");
-var display = document.getElementsById("display");
-var operand1 = 0;
-var operand2 = null;
-var operator = null;
+let string = '';
+let buttons = document.querySelectorAll('.button');
 
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
-        var value = this.getAttribute('data-value');
-        if (value == '+') {
-            operator = '+';
-            operand1 = parseFloat(display.textContent);
-
-        } else if (value == '=') {
-            operand2 = parseFloat(display.textContent);
-
+Array.from(buttons).forEach((button) => {
+    button.addEventListener('click', (e) => {
+        console.log(e.target);
+        if (e.target.innerHTML == '=') {
+            string = eval(string);
+            document.querySelector('input').value = string;
+        } else if (e.target.innerHTML == 'AC') {
+            string = '';
+            document.querySelector('input').value = string;
         } else {
-            display.innerText += value;
+            string = string + e.target.innerHTML;
+            document.querySelector('input').value = string;
         }
-    });
-}
-
-// var val1 = 4;
-// var val2 = 4;
-// var operator = '*';
-
-// var result = (val1 + " " + operator + " " + val2);
-// console.log(result);
+    })
+});
